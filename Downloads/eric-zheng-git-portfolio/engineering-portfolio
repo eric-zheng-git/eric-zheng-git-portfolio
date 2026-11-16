@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,7 @@
       margin: 0;
       background: var(--background);
       color: var(--ink);
-      font: 16px/1.55 Arial, Helvetica, sans-serif;
+      font: 16px/1.55 Arial, sans-serif;
     }
 
     a {
@@ -46,7 +47,7 @@
       margin: 0 auto;
     }
 
-    /* Navigation */
+    /* NAVIGATION */
 
     .topbar {
       background: var(--navy);
@@ -79,7 +80,7 @@
       text-decoration: none;
     }
 
-    /* Introduction */
+    /* ABOUT SECTION */
 
     .hero {
       display: grid;
@@ -100,11 +101,6 @@
       color: #525c69;
       font-size: 19px;
       margin: 0 0 17px;
-    }
-
-    .hero p:last-child {
-      max-width: 680px;
-      margin-bottom: 0;
     }
 
     .school {
@@ -134,7 +130,7 @@
       line-height: 1.15;
     }
 
-    /* Sections */
+    /* SECTIONS */
 
     section {
       padding: 26px 0;
@@ -143,7 +139,6 @@
 
     h2 {
       font-size: 29px;
-      letter-spacing: -0.7px;
       margin: 0 0 16px;
     }
 
@@ -153,7 +148,7 @@
       line-height: 1.25;
     }
 
-    /* Project Cards */
+    /* PROJECT CARDS */
 
     .project {
       display: grid;
@@ -164,7 +159,7 @@
       background: white;
       border-radius: 8px;
       padding: 20px;
-      margin: 0 0 17px;
+      margin-bottom: 17px;
     }
 
     .project-head {
@@ -178,7 +173,6 @@
     .date {
       color: var(--muted);
       font-size: 14px;
-      white-space: nowrap;
     }
 
     .chips {
@@ -194,7 +188,6 @@
       border-radius: 99px;
       padding: 3px 10px;
       font-size: 13px;
-      line-height: 1.45;
     }
 
     .project ul {
@@ -206,7 +199,7 @@
       margin-top: 7px;
     }
 
-    /* Project Images */
+    /* PROJECT VISUALS */
 
     .visual {
       min-width: 0;
@@ -233,7 +226,7 @@
       height: auto;
     }
 
-    /* MoodMixer Preview */
+    /* MOODMIXER DESIGN */
 
     .mood-demo {
       padding: 15px 17px 17px;
@@ -297,7 +290,6 @@
       border-radius: 5px;
       padding: 7px;
       font-size: 11px;
-      color: white;
       display: flex;
       justify-content: space-between;
     }
@@ -314,7 +306,7 @@
       border-radius: 7px;
     }
 
-    /* Digital Filter Graph */
+    /* DIGITAL FILTER GRAPH */
 
     .filter-visual {
       padding: 10px 12px;
@@ -359,7 +351,7 @@
       height: auto;
     }
 
-    /* Skills and Contact */
+    /* SKILLS AND CONTACT */
 
     .bottom-grid {
       display: grid;
@@ -394,6 +386,15 @@
       overflow-wrap: anywhere;
     }
 
+    .contact a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -402,7 +403,7 @@
       font-size: 13px;
     }
 
-    /* Mobile Layout */
+    /* MOBILE RESPONSIVENESS */
 
     @media (max-width: 850px) {
       .hero {
@@ -446,10 +447,6 @@
 
       .project {
         padding: 15px;
-      }
-
-      .mood-demo {
-        padding: 12px;
       }
 
       .mood-fields {
@@ -532,7 +529,7 @@
 
       <h2>Projects</h2>
 
-      <!-- PROJECT 1: RISC-V -->
+      <!-- PROJECT 1: RISC-V PROCESSOR -->
 
       <article class="project">
 
@@ -573,7 +570,7 @@
 
         </div>
 
-        <!-- RISC-V PROCESSOR DIAGRAM -->
+        <!-- RISC-V DIAGRAM -->
 
         <div class="visual">
 
@@ -582,7 +579,7 @@
             <svg class="diagram"
                  viewBox="0 0 620 265"
                  role="img"
-                 aria-label="Single-cycle RISC-V diagram">
+                 aria-label="RISC-V processor diagram">
 
               <defs>
                 <marker id="arrow"
@@ -618,7 +615,7 @@
 
               </g>
 
-              <!-- Processor Components -->
+              <!-- Components -->
 
               <g stroke="#34465d" stroke-width="2">
 
@@ -738,7 +735,7 @@
 
         </div>
 
-        <!-- MOODMIXER IMAGE -->
+        <!-- MOODMIXER PREVIEW -->
 
         <div class="visual">
 
@@ -881,7 +878,7 @@
           </div>
 
           <p class="visual-note">
-            Illustrative signal graph, not measured FPGA output
+            Illustrative graph, not measured FPGA output
           </p>
 
         </div>
@@ -890,7 +887,7 @@
 
     </section>
 
-    <!-- SKILLS AND CONTACT -->
+    <!-- TECHNICAL SKILLS AND CONTACT -->
 
     <section class="bottom-grid">
 
@@ -946,32 +943,25 @@
 
       </div>
 
+      <!-- UPDATED CONTACT INFORMATION -->
+
       <div class="contact" id="contact">
 
         <h2>Contact</h2>
 
         <p>
           ✉ &nbsp;
-          <a href="mailto:youremail@example.com">
-            youremail@example.com
+          <a href="mailto:zhenge8@uci.edu">
+            zhenge8@uci.edu
           </a>
         </p>
 
         <p>
           ◉ &nbsp;
-          <a href="https://github.com/YOURUSERNAME"
+          <a href="https://github.com/eric-zheng-git"
              target="_blank"
              rel="noopener noreferrer">
-            github.com/YOURUSERNAME
-          </a>
-        </p>
-
-        <p>
-          ▣ &nbsp;
-          <a href="https://www.linkedin.com/in/YOURPROFILE"
-             target="_blank"
-             rel="noopener noreferrer">
-            linkedin.com/in/YOURPROFILE
+            github.com/eric-zheng-git
           </a>
         </p>
 
@@ -987,7 +977,7 @@
     © 2026 Eric Zheng · Engineering Portfolio
   </footer>
 
-  <!-- FIXED JAVASCRIPT FOR DIGITAL FILTER GRAPH -->
+  <!-- JAVASCRIPT FOR DIGITAL FILTER GRAPH -->
 
   <script>
     (() => {
@@ -1007,7 +997,7 @@
       const W = canvas.width;
       const H = canvas.height;
 
-      // Fixed: use chartTop instead of top
+      // Use chartTop to avoid browser variable conflicts
       const left = 52;
       const right = W - 14;
       const chartTop = 12;
