@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Eric Zheng | Engineering Portfolio</title>
 
   <style>
@@ -30,7 +29,7 @@
       margin: 0;
       background: var(--background);
       color: var(--ink);
-      font: 16px/1.55 Arial, Helvetica, sans-serif;
+      font: 16px/1.55 Arial, sans-serif;
     }
 
     a {
@@ -45,8 +44,6 @@
       width: min(1100px, calc(100% - 48px));
       margin: 0 auto;
     }
-
-    /* Navigation */
 
     .topbar {
       background: var(--navy);
@@ -79,8 +76,6 @@
       text-decoration: none;
     }
 
-    /* Introduction */
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 330px;
@@ -100,11 +95,6 @@
       color: #525c69;
       font-size: 19px;
       margin: 0 0 17px;
-    }
-
-    .hero p:last-child {
-      max-width: 680px;
-      margin-bottom: 0;
     }
 
     .school {
@@ -134,8 +124,6 @@
       line-height: 1.15;
     }
 
-    /* Sections */
-
     section {
       padding: 26px 0;
       border-top: 1px solid var(--line);
@@ -143,7 +131,6 @@
 
     h2 {
       font-size: 29px;
-      letter-spacing: -0.7px;
       margin: 0 0 16px;
     }
 
@@ -153,18 +140,16 @@
       line-height: 1.25;
     }
 
-    /* Project Cards */
-
     .project {
       display: grid;
       grid-template-columns: 1.18fr 1fr;
-      align-items: center;
+      align-items: start;
       gap: 24px;
       border: 1px solid #cbd5e1;
       background: white;
       border-radius: 8px;
       padding: 20px;
-      margin: 0 0 17px;
+      margin-bottom: 17px;
     }
 
     .project-head {
@@ -178,7 +163,6 @@
     .date {
       color: var(--muted);
       font-size: 14px;
-      white-space: nowrap;
     }
 
     .chips {
@@ -194,7 +178,6 @@
       border-radius: 99px;
       padding: 3px 10px;
       font-size: 13px;
-      line-height: 1.45;
     }
 
     .project ul {
@@ -206,10 +189,14 @@
       margin-top: 7px;
     }
 
-    /* Project Images */
-
     .visual {
       min-width: 0;
+    }
+
+    .visual-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     .visual-frame {
@@ -218,6 +205,12 @@
       border-radius: 7px;
       overflow: hidden;
       background: white;
+    }
+
+    .visual-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .visual-note {
@@ -232,8 +225,6 @@
       width: 100%;
       height: auto;
     }
-
-    /* MoodMixer Preview */
 
     .mood-demo {
       padding: 15px 17px 17px;
@@ -297,7 +288,6 @@
       border-radius: 5px;
       padding: 7px;
       font-size: 11px;
-      color: white;
       display: flex;
       justify-content: space-between;
     }
@@ -313,8 +303,6 @@
       font-size: 12px;
       border-radius: 7px;
     }
-
-    /* Digital Filter Graph */
 
     .filter-visual {
       padding: 10px 12px;
@@ -359,8 +347,6 @@
       height: auto;
     }
 
-    /* Skills and Contact */
-
     .bottom-grid {
       display: grid;
       grid-template-columns: 1.4fr 0.75fr;
@@ -394,6 +380,15 @@
       overflow-wrap: anywhere;
     }
 
+    .contact a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       color: var(--muted);
@@ -401,8 +396,6 @@
       padding: 20px 0 25px;
       font-size: 13px;
     }
-
-    /* Mobile Layout */
 
     @media (max-width: 850px) {
       .hero {
@@ -448,10 +441,6 @@
         padding: 15px;
       }
 
-      .mood-demo {
-        padding: 12px;
-      }
-
       .mood-fields {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -470,14 +459,9 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <header class="topbar">
     <nav class="container">
-
-      <a class="brand" href="#home">
-        Eric Zheng
-      </a>
+      <a class="brand" href="#home">Eric Zheng</a>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -485,18 +469,13 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
-
     </nav>
   </header>
 
   <main class="container">
 
-    <!-- ABOUT ME -->
-
     <div class="hero" id="home">
-
       <div id="about">
-
         <h1>Eric Zheng</h1>
 
         <p class="subtitle">
@@ -511,7 +490,6 @@
           combine hardware and software to solve
           real-world problems.
         </p>
-
       </div>
 
       <div class="school">
@@ -523,21 +501,14 @@
           California, Irvine
         </span>
       </div>
-
     </div>
 
-    <!-- PROJECTS -->
-
     <section id="projects">
-
       <h2>Projects</h2>
 
-      <!-- PROJECT 1: RISC-V -->
-
+      <!-- PROJECT 1 -->
       <article class="project">
-
         <div>
-
           <div class="project-head">
             <h3>Single-Cycle RISC-V Processor</h3>
             <span class="date">June 2026</span>
@@ -551,7 +522,6 @@
           </div>
 
           <ul>
-
             <li>
               Designed and implemented a single-cycle
               RISC-V processor using Verilog, including
@@ -565,143 +535,113 @@
             </li>
 
             <li>
-              Synthesized the design at 50 MHz with
-              less than 15% LUT utilization.
+              Used waveform simulation and datapath
+              verification in Vivado/XSim to confirm
+              correct instruction execution.
             </li>
-
           </ul>
-
         </div>
-
-        <!-- RISC-V PROCESSOR DIAGRAM -->
 
         <div class="visual">
+          <div class="visual-stack">
 
-          <div class="visual-frame">
+            <!-- FIRST IMAGE: YOUR WAVEFORM -->
+            <div>
+              <div class="visual-frame">
+                <img
+                  src="images/datapath-waveform.png"
+                  alt="Datapath waveform simulation from Vivado for the single-cycle RISC-V processor">
+              </div>
+              <p class="visual-note">
+                Datapath waveform simulation
+              </p>
+            </div>
 
-            <svg class="diagram"
-                 viewBox="0 0 620 265"
-                 role="img"
-                 aria-label="Single-cycle RISC-V diagram">
+            <!-- SECOND IMAGE: DATAPATH DIAGRAM -->
+            <div>
+              <div class="visual-frame">
+                <svg class="diagram"
+                     viewBox="0 0 620 265"
+                     role="img"
+                     aria-label="Single-cycle RISC-V datapath diagram">
 
-              <defs>
-                <marker id="arrow"
-                        markerWidth="7"
-                        markerHeight="7"
-                        refX="6"
-                        refY="3.5"
-                        orient="auto">
+                  <defs>
+                    <marker id="arrow"
+                            markerWidth="7"
+                            markerHeight="7"
+                            refX="6"
+                            refY="3.5"
+                            orient="auto">
+                      <path d="M0 0 L7 3.5 L0 7 Z"
+                            fill="#3d4a5a"/>
+                    </marker>
+                  </defs>
 
-                  <path d="M0 0 L7 3.5 L0 7 Z"
-                        fill="#3d4a5a"/>
+                  <g fill="none"
+                     stroke="#3d4a5a"
+                     stroke-width="2.2"
+                     marker-end="url(#arrow)">
+                    <path d="M64 137 H107"/>
+                    <path d="M195 137 H247"/>
+                    <path d="M343 137 H386"/>
+                    <path d="M456 137 H491"/>
+                    <path d="M156 105 V59 H280 V88"/>
+                    <path d="M312 88 V61 H419 V107"/>
+                    <path d="M549 167 V230 H312 V166"/>
+                    <path d="M28 169 V229 H128 V170"/>
+                  </g>
 
-                </marker>
-              </defs>
+                  <g stroke="#34465d" stroke-width="2">
+                    <rect x="19" y="113" width="45" height="54" rx="3" fill="#d8e9fb"/>
+                    <rect x="107" y="105" width="88" height="65" rx="3" fill="#e3effc"/>
+                    <rect x="247" y="104" width="96" height="66" rx="3" fill="#dfedff"/>
+                    <path d="M386 103 L456 122 L456 152 L386 171 Z" fill="#e2e5fd"/>
+                    <rect x="491" y="105" width="101" height="64" rx="3" fill="#e6f1df"/>
+                    <rect x="262" y="18" width="87" height="45" rx="3" fill="#fff0c4"/>
+                    <rect x="99" y="214" width="103" height="34" rx="3" fill="#f0f1f4"/>
+                  </g>
 
-              <!-- Connections -->
+                  <g fill="#1c2c42"
+                     font-size="15"
+                     font-weight="700"
+                     font-family="Arial"
+                     text-anchor="middle">
+                    <text x="41" y="145">PC</text>
 
-              <g fill="none"
-                 stroke="#3d4a5a"
-                 stroke-width="2.2"
-                 marker-end="url(#arrow)">
+                    <text x="151" y="132">
+                      <tspan x="151">Instruction</tspan>
+                      <tspan x="151" dy="18">Memory</tspan>
+                    </text>
 
-                <path d="M64 137 H107"/>
-                <path d="M195 137 H247"/>
-                <path d="M343 137 H386"/>
-                <path d="M456 137 H491"/>
+                    <text x="295" y="132">
+                      <tspan x="295">Register</tspan>
+                      <tspan x="295" dy="18">File</tspan>
+                    </text>
 
-                <path d="M156 105 V59 H280 V88"/>
-                <path d="M312 88 V61 H419 V107"/>
+                    <text x="419" y="143">ALU</text>
 
-                <path d="M549 167 V230 H312 V166"/>
-                <path d="M28 169 V229 H128 V170"/>
+                    <text x="541" y="132">
+                      <tspan x="541">Data</tspan>
+                      <tspan x="541" dy="18">Memory</tspan>
+                    </text>
 
-              </g>
-
-              <!-- Processor Components -->
-
-              <g stroke="#34465d" stroke-width="2">
-
-                <rect x="19" y="113"
-                      width="45" height="54"
-                      rx="3" fill="#d8e9fb"/>
-
-                <rect x="107" y="105"
-                      width="88" height="65"
-                      rx="3" fill="#e3effc"/>
-
-                <rect x="247" y="104"
-                      width="96" height="66"
-                      rx="3" fill="#dfedff"/>
-
-                <path d="M386 103 L456 122
-                         L456 152 L386 171 Z"
-                      fill="#e2e5fd"/>
-
-                <rect x="491" y="105"
-                      width="101" height="64"
-                      rx="3" fill="#e6f1df"/>
-
-                <rect x="262" y="18"
-                      width="87" height="45"
-                      rx="3" fill="#fff0c4"/>
-
-                <rect x="99" y="214"
-                      width="103" height="34"
-                      rx="3" fill="#f0f1f4"/>
-
-              </g>
-
-              <!-- Labels -->
-
-              <g fill="#1c2c42"
-                 font-size="15"
-                 font-weight="700"
-                 font-family="Arial"
-                 text-anchor="middle">
-
-                <text x="41" y="145">PC</text>
-
-                <text x="151" y="132">
-                  <tspan x="151">Instruction</tspan>
-                  <tspan x="151" dy="18">Memory</tspan>
-                </text>
-
-                <text x="295" y="132">
-                  <tspan x="295">Register</tspan>
-                  <tspan x="295" dy="18">File</tspan>
-                </text>
-
-                <text x="419" y="143">ALU</text>
-
-                <text x="541" y="132">
-                  <tspan x="541">Data</tspan>
-                  <tspan x="541" dy="18">Memory</tspan>
-                </text>
-
-                <text x="305" y="46">Control</text>
-                <text x="150" y="237">PC + 4</text>
-
-              </g>
-
-            </svg>
+                    <text x="305" y="46">Control</text>
+                    <text x="150" y="237">PC + 4</text>
+                  </g>
+                </svg>
+              </div>
+              <p class="visual-note">
+                Single-cycle datapath diagram
+              </p>
+            </div>
 
           </div>
-
-          <p class="visual-note">
-            Simplified processor datapath illustration
-          </p>
-
         </div>
-
       </article>
 
-      <!-- PROJECT 2: MOODMIXER -->
-
+      <!-- PROJECT 2 -->
       <article class="project">
-
         <div>
-
           <div class="project-head">
             <h3>MoodMixer — AI Playlist Generator</h3>
             <span class="date">2026</span>
@@ -716,7 +656,6 @@
           </div>
 
           <ul>
-
             <li>
               Developed a full-stack web application
               for AI-powered personalized music playlists.
@@ -733,19 +672,13 @@
               song replacement, undo/redo, and saving
               playlists to Spotify.
             </li>
-
           </ul>
-
         </div>
 
-        <!-- MOODMIXER IMAGE -->
-
         <div class="visual">
-
           <div class="visual-frame mood-demo">
 
             <div class="mood-header">
-
               <strong>
                 <span class="music-mark">♫</span>
                 MoodMixer
@@ -754,69 +687,50 @@
               <span class="mood-nav">
                 Generate &nbsp; Playlist &nbsp; Saved
               </span>
-
             </div>
 
-            <h4>
-              Generate a Playlist for Your Mood
-            </h4>
+            <h4>Generate a Playlist for Your Mood</h4>
 
             <p class="tagline">
               Create a personalized Spotify playlist using AI.
             </p>
 
             <div class="mood-fields">
-
               <div class="fake-field">
                 <label>Mood</label>
-                <div class="fake-select">
-                  Happy <span>⌄</span>
-                </div>
+                <div class="fake-select">Happy <span>⌄</span></div>
               </div>
 
               <div class="fake-field">
                 <label>Genre</label>
-                <div class="fake-select">
-                  Pop <span>⌄</span>
-                </div>
+                <div class="fake-select">Pop <span>⌄</span></div>
               </div>
 
               <div class="fake-field">
                 <label>Era</label>
-                <div class="fake-select">
-                  2010s <span>⌄</span>
-                </div>
+                <div class="fake-select">2010s <span>⌄</span></div>
               </div>
 
               <div class="fake-field">
                 <label>Song Count</label>
-                <div class="fake-select">
-                  20 <span>⌄</span>
-                </div>
+                <div class="fake-select">20 <span>⌄</span></div>
               </div>
-
             </div>
 
             <div class="demo-button">
               ✦ Generate Playlist
             </div>
-
           </div>
 
           <p class="visual-note">
             Illustrative MoodMixer interface preview
           </p>
-
         </div>
-
       </article>
 
-      <!-- PROJECT 3: DIGITAL FILTER -->
-
+      <!-- PROJECT 3 -->
       <article class="project">
-
         <div>
-
           <div class="project-head">
             <h3>FPGA Digital Filter Accelerator</h3>
             <span class="date">2026 · In Progress</span>
@@ -830,7 +744,6 @@
           </div>
 
           <ul>
-
             <li>
               Exploring FPGA-based filtering to reduce
               unwanted noise in digital signals.
@@ -846,29 +759,19 @@
               compare its output with a Python
               reference model.
             </li>
-
           </ul>
-
         </div>
 
-        <!-- DIGITAL FILTER GRAPH -->
-
         <div class="visual">
-
           <div class="visual-frame filter-visual">
-
-            <p class="filter-title">
-              Digital Filter: Noise Removal
-            </p>
+            <p class="filter-title">Digital Filter: Noise Removal</p>
 
             <p class="filter-legend">
-
               <span class="grey-line"></span>
               Noisy signal
 
               <span class="blue-line"></span>
               Clean reference signal
-
             </p>
 
             <canvas
@@ -877,31 +780,21 @@
               height="255"
               aria-label="Illustrative noisy and clean signals">
             </canvas>
-
           </div>
 
           <p class="visual-note">
-            Illustrative signal graph, not measured FPGA output
+            Illustrative graph, not measured FPGA output
           </p>
-
         </div>
-
       </article>
-
     </section>
 
-    <!-- SKILLS AND CONTACT -->
-
     <section class="bottom-grid">
-
       <div id="skills">
-
         <h2>Technical Skills</h2>
 
         <div class="skill-row">
-
           <strong>Programming Languages</strong>
-
           <div class="skill-chips">
             <span class="chip">C</span>
             <span class="chip">Python</span>
@@ -911,13 +804,10 @@
             <span class="chip">HTML</span>
             <span class="chip">CSS</span>
           </div>
-
         </div>
 
         <div class="skill-row">
-
           <strong>Tools & Software</strong>
-
           <div class="skill-chips">
             <span class="chip">Vivado</span>
             <span class="chip">XSim</span>
@@ -927,13 +817,10 @@
             <span class="chip">Tailwind CSS</span>
             <span class="chip">Alpine.js</span>
           </div>
-
         </div>
 
         <div class="skill-row">
-
           <strong>Engineering</strong>
-
           <div class="skill-chips">
             <span class="chip">Digital Logic</span>
             <span class="chip">Computer Architecture</span>
@@ -941,198 +828,103 @@
             <span class="chip">FPGA Development</span>
             <span class="chip">Hardware Verification</span>
           </div>
-
         </div>
-
       </div>
 
       <div class="contact" id="contact">
-
         <h2>Contact</h2>
 
         <p>
           ✉ &nbsp;
-          <a href="mailto:youremail@example.com">
-            youremail@example.com
-          </a>
+          <a href="mailto:zhenge8@uci.edu">zhenge8@uci.edu</a>
         </p>
 
         <p>
           ◉ &nbsp;
-          <a href="https://github.com/YOURUSERNAME"
-             target="_blank"
-             rel="noopener noreferrer">
-            github.com/YOURUSERNAME
+          <a href="https://github.com/eric-zheng-git" target="_blank" rel="noopener noreferrer">
+            github.com/eric-zheng-git
           </a>
         </p>
-
-        <p>
-          ▣ &nbsp;
-          <a href="https://www.linkedin.com/in/YOURPROFILE"
-             target="_blank"
-             rel="noopener noreferrer">
-            linkedin.com/in/YOURPROFILE
-          </a>
-        </p>
-
       </div>
-
     </section>
-
   </main>
-
-  <!-- FOOTER -->
 
   <footer>
     © 2026 Eric Zheng · Engineering Portfolio
   </footer>
 
-  <!-- FIXED JAVASCRIPT FOR DIGITAL FILTER GRAPH -->
-
   <script>
     (() => {
-
       const canvas = document.getElementById('filterCanvas');
-
-      if (!canvas) {
-        return;
-      }
+      if (!canvas) return;
 
       const ctx = canvas.getContext('2d');
-
-      if (!ctx) {
-        return;
-      }
+      if (!ctx) return;
 
       const W = canvas.width;
       const H = canvas.height;
 
-      // Fixed: use chartTop instead of top
       const left = 52;
       const right = W - 14;
       const chartTop = 12;
       const bottom = H - 35;
 
-      const px = t =>
-        left + (t / 1000) * (right - left);
-
-      const py = y =>
-        chartTop + ((1.5 - y) / 3) * (bottom - chartTop);
+      const px = t => left + (t / 1000) * (right - left);
+      const py = y => chartTop + ((1.5 - y) / 3) * (bottom - chartTop);
 
       ctx.font = '12px Arial';
       ctx.lineWidth = 1;
 
-      // Horizontal grid lines
-
       for (let y = -1.5; y <= 1.51; y += 0.5) {
-
         ctx.strokeStyle = '#edf0f4';
         ctx.beginPath();
-
         ctx.moveTo(left, py(y));
         ctx.lineTo(right, py(y));
-
         ctx.stroke();
 
         ctx.fillStyle = '#5f6875';
         ctx.textAlign = 'right';
-
-        ctx.fillText(
-          y.toFixed(1),
-          left - 8,
-          py(y) + 4
-        );
-
+        ctx.fillText(y.toFixed(1), left - 8, py(y) + 4);
       }
 
-      // Vertical grid lines
-
       for (let t = 0; t <= 1000; t += 200) {
-
         ctx.strokeStyle = '#edf0f4';
         ctx.beginPath();
-
         ctx.moveTo(px(t), chartTop);
         ctx.lineTo(px(t), bottom);
-
         ctx.stroke();
 
         ctx.fillStyle = '#5f6875';
         ctx.textAlign = 'center';
-
-        ctx.fillText(
-          t,
-          px(t),
-          bottom + 18
-        );
-
+        ctx.fillText(t, px(t), bottom + 18);
       }
 
-      // Graph border
-
       ctx.strokeStyle = '#778392';
-
-      ctx.strokeRect(
-        left,
-        chartTop,
-        right - left,
-        bottom - chartTop
-      );
-
-      // X-axis label
+      ctx.strokeRect(left, chartTop, right - left, bottom - chartTop);
 
       ctx.fillStyle = '#384456';
       ctx.textAlign = 'center';
-
-      ctx.fillText(
-        'Time (samples)',
-        (left + right) / 2,
-        H - 5
-      );
-
-      // Y-axis label
+      ctx.fillText('Time (samples)', (left + right) / 2, H - 5);
 
       ctx.save();
-
-      ctx.translate(
-        14,
-        (chartTop + bottom) / 2
-      );
-
+      ctx.translate(14, (chartTop + bottom) / 2);
       ctx.rotate(-Math.PI / 2);
-
       ctx.fillText('Amplitude', 0, 0);
-
       ctx.restore();
-
-      // Repeatable illustrative noise
 
       let seed = 13;
 
       function random() {
-
-        seed = (
-          seed * 1664525 + 1013904223
-        ) >>> 0;
-
+        seed = (seed * 1664525 + 1013904223) >>> 0;
         return seed / 4294967296;
-
       }
 
       function clean(t) {
-
-        return 0.68 * Math.sin(
-          (2 * Math.PI * t) / 310 - 0.3
-        );
-
+        return 0.68 * Math.sin((2 * Math.PI * t) / 310 - 0.3);
       }
 
-      // Draw noisy signal
-
       ctx.beginPath();
-
       for (let t = 0; t <= 1000; t += 2) {
-
         const noise =
           0.38 * (2 * random() - 1) +
           0.14 * Math.sin(t * 0.7);
@@ -1140,39 +932,26 @@
         const x = px(t);
         const y = py(clean(t) + noise);
 
-        if (t === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
-
+        if (t === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
       }
 
       ctx.strokeStyle = '#aab1ba';
       ctx.lineWidth = 1.1;
       ctx.stroke();
 
-      // Draw smooth signal
-
       ctx.beginPath();
-
       for (let t = 0; t <= 1000; t += 2) {
-
         const x = px(t);
         const y = py(clean(t));
 
-        if (t === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
-
+        if (t === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
       }
 
       ctx.strokeStyle = '#2863d7';
       ctx.lineWidth = 3;
       ctx.stroke();
-
     })();
   </script>
 
